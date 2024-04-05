@@ -1,19 +1,18 @@
-import Image from "next/image";
 import Link from "next/link";
 
 const Header = () => {
   const navItems = [
     {
       display: "the camp",
-      slug: "",
+      slug: "/",
     },
     {
       display: "the experience",
-      slug: "experience",
+      slug: "/experience",
     },
     {
       display: "the blog",
-      slug: "blog",
+      slug: "/blog",
     },
   ];
   return (
@@ -26,7 +25,7 @@ const Header = () => {
       <ul className="header__nav">
         {navItems.map((navItem) => (
           <li key={navItem.display}>
-            <Link href={`/${navItem.slug}`}>
+            <Link href={navItem.slug}>
               <h5>{navItem.display}</h5>
             </Link>
           </li>
